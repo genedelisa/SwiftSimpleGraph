@@ -12,6 +12,10 @@
 		B02D633D1944EBFA0000328A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02D633B1944EBFA0000328A /* Main.storyboard */; };
 		B02D633F1944EBFA0000328A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02D633E1944EBFA0000328A /* Images.xcassets */; };
 		B02D634B1944EBFA0000328A /* SwiftSimpleAUGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D634A1944EBFA0000328A /* SwiftSimpleAUGraphTests.swift */; };
+		B02D63551944ECB90000328A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B02D63541944ECB90000328A /* README.md */; };
+		B02D63571944ECC60000328A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B02D63561944ECC60000328A /* LICENSE */; };
+		B02D635A1944ED2D0000328A /* CheckError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D63581944ED2D0000328A /* CheckError.swift */; };
+		B02D635B1944ED2D0000328A /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D63591944ED2D0000328A /* SoundGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		B02D63441944EBFA0000328A /* SwiftSimpleAUGraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSimpleAUGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02D63491944EBFA0000328A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B02D634A1944EBFA0000328A /* SwiftSimpleAUGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSimpleAUGraphTests.swift; sourceTree = "<group>"; };
+		B02D63541944ECB90000328A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B02D63561944ECC60000328A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B02D63581944ED2D0000328A /* CheckError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckError.swift; sourceTree = "<group>"; };
+		B02D63591944ED2D0000328A /* SoundGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 		B02D63291944EBFA0000328A = {
 			isa = PBXGroup;
 			children = (
+				B02D63561944ECC60000328A /* LICENSE */,
+				B02D63541944ECB90000328A /* README.md */,
 				B02D63341944EBFA0000328A /* SwiftSimpleAUGraph */,
 				B02D63471944EBFA0000328A /* SwiftSimpleAUGraphTests */,
 				B02D63331944EBFA0000328A /* Products */,
@@ -75,6 +85,8 @@
 		B02D63341944EBFA0000328A /* SwiftSimpleAUGraph */ = {
 			isa = PBXGroup;
 			children = (
+				B02D63581944ED2D0000328A /* CheckError.swift */,
+				B02D63591944ED2D0000328A /* SoundGenerator.swift */,
 				B02D63371944EBFA0000328A /* AppDelegate.swift */,
 				B02D63391944EBFA0000328A /* ViewController.swift */,
 				B02D633B1944EBFA0000328A /* Main.storyboard */,
@@ -189,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02D63571944ECC60000328A /* LICENSE in Resources */,
 				B02D633D1944EBFA0000328A /* Main.storyboard in Resources */,
 				B02D633F1944EBFA0000328A /* Images.xcassets in Resources */,
 			);
@@ -208,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02D63551944ECB90000328A /* README.md in Sources */,
 				B02D633A1944EBFA0000328A /* ViewController.swift in Sources */,
 				B02D63381944EBFA0000328A /* AppDelegate.swift in Sources */,
+				B02D635B1944ED2D0000328A /* SoundGenerator.swift in Sources */,
+				B02D635A1944ED2D0000328A /* CheckError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
