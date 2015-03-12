@@ -12,7 +12,6 @@
 		B02D633D1944EBFA0000328A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02D633B1944EBFA0000328A /* Main.storyboard */; };
 		B02D633F1944EBFA0000328A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02D633E1944EBFA0000328A /* Images.xcassets */; };
 		B02D634B1944EBFA0000328A /* SwiftSimpleAUGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D634A1944EBFA0000328A /* SwiftSimpleAUGraphTests.swift */; };
-		B02D63551944ECB90000328A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B02D63541944ECB90000328A /* README.md */; };
 		B02D63571944ECC60000328A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B02D63561944ECC60000328A /* LICENSE */; };
 		B02D635A1944ED2D0000328A /* CheckError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D63581944ED2D0000328A /* CheckError.swift */; };
 		B02D635B1944ED2D0000328A /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D63591944ED2D0000328A /* SoundGenerator.swift */; };
@@ -221,7 +220,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B02D63551944ECB90000328A /* README.md in Sources */,
 				B02D633A1944EBFA0000328A /* ViewController.swift in Sources */,
 				B02D63381944EBFA0000328A /* AppDelegate.swift in Sources */,
 				B02D635B1944ED2D0000328A /* SoundGenerator.swift in Sources */,
@@ -413,6 +411,7 @@
 				B02D63501944EBFA0000328A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B02D63511944EBFA0000328A /* Build configuration list for PBXNativeTarget "SwiftSimpleAUGraphTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +420,7 @@
 				B02D63531944EBFA0000328A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
