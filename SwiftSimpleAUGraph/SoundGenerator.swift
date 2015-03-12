@@ -19,7 +19,7 @@ class SoundGenerator : NSObject {
     var ioUnit:AudioUnit
     var isPlaying:Bool
     
-    init() {
+    override init() {
         self.processingGraph = AUGraph()
         self.samplerNode = AUNode()
         self.ioNode = AUNode()

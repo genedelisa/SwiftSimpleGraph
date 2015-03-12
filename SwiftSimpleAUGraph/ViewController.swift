@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     var soundGenerator:SoundGenerator
-    
-    init(coder aDecoder: NSCoder!) {
+
+    required init(coder aDecoder: NSCoder) {
         self.soundGenerator = SoundGenerator()
         super.init(coder: aDecoder)
     }
