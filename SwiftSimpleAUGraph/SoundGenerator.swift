@@ -45,14 +45,14 @@ class SoundGenerator : NSObject {
         var cd = AudioComponentDescription(componentType: OSType(kAudioUnitType_MusicDevice),
             componentSubType: OSType(kAudioUnitSubType_Sampler),
             componentManufacturer: OSType(kAudioUnitManufacturer_Apple),
-            componentFlags: 0,componentFlagsMask: 0)
+            componentFlags: 0, componentFlagsMask: 0)
         status = AUGraphAddNode(self.processingGraph, &cd, &samplerNode)
         CheckError(status)
         
         var ioUnitDescription = AudioComponentDescription(componentType: OSType(kAudioUnitType_Output),
             componentSubType: OSType(kAudioUnitSubType_RemoteIO),
             componentManufacturer: OSType(kAudioUnitManufacturer_Apple),
-            componentFlags: 0,componentFlagsMask: 0)
+            componentFlags: 0, componentFlagsMask: 0)
         status = AUGraphAddNode(self.processingGraph, &ioUnitDescription, &ioNode)
         CheckError(status)
         
@@ -70,6 +70,10 @@ class SoundGenerator : NSObject {
             self.samplerNode, samplerOutputElement, // srcnode, inSourceOutputNumber
             self.ioNode, ioUnitOutputElement) // destnode, inDestInputNumber
         CheckError(status)
+        
+        // print info to stdout for debugging
+        CAShow(UnsafeMutablePointer<AUGraph>(self.processingGraph))
+
     }
     
     func graphStart() {
@@ -84,7 +88,6 @@ class SoundGenerator : NSObject {
             status = AUGraphInitialize(self.processingGraph)
             CheckError(status)
         }
-        
 
         var isRunning = DarwinBoolean(false)
         AUGraphIsRunning(self.processingGraph, &isRunning)
@@ -98,6 +101,7 @@ class SoundGenerator : NSObject {
     }
     
     func playNoteOn(noteNum:UInt32, velocity:UInt32)    {
+        // note on command on channel 0
         let noteCommand = UInt32(0x90 | 0)
         var status = OSStatus(noErr)
         status = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, velocity, 0)
@@ -106,6 +110,7 @@ class SoundGenerator : NSObject {
     }
     
     func playNoteOff(noteNum:UInt32)    {
+        // note off command on channel 0
         let noteCommand = UInt32(0x80 | 0)
         var status = OSStatus(noErr)
         status = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, 0, 0)
