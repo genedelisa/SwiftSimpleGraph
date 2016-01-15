@@ -14,156 +14,156 @@ import CoreAudio
 func CheckError(error:OSStatus) {
     if error == 0 {return}
     
-    switch(Int(error)) {
+    switch(error) {
         // AudioToolbox
     case kAUGraphErr_NodeNotFound:
-        println("Error:kAUGraphErr_NodeNotFound \n");
+        print("Error:kAUGraphErr_NodeNotFound")
         
     case kAUGraphErr_OutputNodeErr:
-        println( "Error:kAUGraphErr_OutputNodeErr \n");
+        print( "Error:kAUGraphErr_OutputNodeErr")
         
     case kAUGraphErr_InvalidConnection:
-        println("Error:kAUGraphErr_InvalidConnection \n");
+        print("Error:kAUGraphErr_InvalidConnection")
         
     case kAUGraphErr_CannotDoInCurrentContext:
-        println( "Error:kAUGraphErr_CannotDoInCurrentContext \n");
+        print( "Error:kAUGraphErr_CannotDoInCurrentContext")
         
     case kAUGraphErr_InvalidAudioUnit:
-        println( "Error:kAUGraphErr_InvalidAudioUnit \n");
+        print( "Error:kAUGraphErr_InvalidAudioUnit")
         
         //    case kMIDIInvalidClient :
-        //        println( "kMIDIInvalidClient ");
+        //        print( "kMIDIInvalidClient ")
         //
         //
         //    case kMIDIInvalidPort :
-        //        println( "kMIDIInvalidPort ");
+        //        print( "kMIDIInvalidPort ")
         //
         //
         //    case kMIDIWrongEndpointType :
-        //        println( "kMIDIWrongEndpointType");
+        //        print( "kMIDIWrongEndpointType")
         //
         //
         //    case kMIDINoConnection :
-        //        println( "kMIDINoConnection ");
+        //        print( "kMIDINoConnection ")
         //
         //
         //    case kMIDIUnknownEndpoint :
-        //        println( "kMIDIUnknownEndpoint ");
+        //        print( "kMIDIUnknownEndpoint ")
         //
         //
         //    case kMIDIUnknownProperty :
-        //        println( "kMIDIUnknownProperty ");
+        //        print( "kMIDIUnknownProperty ")
         //
         //
         //    case kMIDIWrongPropertyType :
-        //        println( "kMIDIWrongPropertyType ");
+        //        print( "kMIDIWrongPropertyType ")
         //
         //
         //    case kMIDINoCurrentSetup :
-        //        println( "kMIDINoCurrentSetup ");
+        //        print( "kMIDINoCurrentSetup ")
         //
         //
         //    case kMIDIMessageSendErr :
-        //        println( "kMIDIMessageSendErr ");
+        //        print( "kMIDIMessageSendErr ")
         //
         //
         //    case kMIDIServerStartErr :
-        //        println( "kMIDIServerStartErr ");
+        //        print( "kMIDIServerStartErr ")
         //
         //
         //    case kMIDISetupFormatErr :
-        //        println( "kMIDISetupFormatErr ");
+        //        print( "kMIDISetupFormatErr ")
         //
         //
         //    case kMIDIWrongThread :
-        //        println( "kMIDIWrongThread ");
+        //        print( "kMIDIWrongThread ")
         //
         //
         //    case kMIDIObjectNotFound :
-        //        println( "kMIDIObjectNotFound ");
+        //        print( "kMIDIObjectNotFound ")
         //
         //
         //    case kMIDIIDNotUnique :
-        //        println( "kMIDIIDNotUnique ");
+        //        print( "kMIDIIDNotUnique ")
         
         
     case kAudioToolboxErr_InvalidSequenceType :
-        println( " kAudioToolboxErr_InvalidSequenceType ");
+        print( " kAudioToolboxErr_InvalidSequenceType")
         
     case kAudioToolboxErr_TrackIndexError :
-        println( " kAudioToolboxErr_TrackIndexError ");
+        print( " kAudioToolboxErr_TrackIndexError")
         
     case kAudioToolboxErr_TrackNotFound :
-        println( " kAudioToolboxErr_TrackNotFound ");
+        print( " kAudioToolboxErr_TrackNotFound")
         
     case kAudioToolboxErr_EndOfTrack :
-        println( " kAudioToolboxErr_EndOfTrack ");
+        print( " kAudioToolboxErr_EndOfTrack")
         
     case kAudioToolboxErr_StartOfTrack :
-        println( " kAudioToolboxErr_StartOfTrack ");
+        print( " kAudioToolboxErr_StartOfTrack")
         
     case kAudioToolboxErr_IllegalTrackDestination	:
-        println( " kAudioToolboxErr_IllegalTrackDestination");
+        print( " kAudioToolboxErr_IllegalTrackDestination")
         
     case kAudioToolboxErr_NoSequence 		:
-        println( " kAudioToolboxErr_NoSequence ");
+        print( " kAudioToolboxErr_NoSequence")
         
     case kAudioToolboxErr_InvalidEventType		:
-        println( " kAudioToolboxErr_InvalidEventType");
+        print( " kAudioToolboxErr_InvalidEventType")
         
     case kAudioToolboxErr_InvalidPlayerState	:
-        println( " kAudioToolboxErr_InvalidPlayerState");
+        print( " kAudioToolboxErr_InvalidPlayerState")
         
     case kAudioUnitErr_InvalidProperty		:
-        println( " kAudioUnitErr_InvalidProperty");
+        print( " kAudioUnitErr_InvalidProperty")
         
     case kAudioUnitErr_InvalidParameter		:
-        println( " kAudioUnitErr_InvalidParameter");
+        print( " kAudioUnitErr_InvalidParameter")
         
     case kAudioUnitErr_InvalidElement		:
-        println( " kAudioUnitErr_InvalidElement");
+        print( " kAudioUnitErr_InvalidElement")
         
     case kAudioUnitErr_NoConnection			:
-        println( " kAudioUnitErr_NoConnection");
+        print( " kAudioUnitErr_NoConnection")
         
     case kAudioUnitErr_FailedInitialization		:
-        println( " kAudioUnitErr_FailedInitialization");
+        print( " kAudioUnitErr_FailedInitialization")
         
     case kAudioUnitErr_TooManyFramesToProcess	:
-        println( " kAudioUnitErr_TooManyFramesToProcess");
+        print( " kAudioUnitErr_TooManyFramesToProcess")
         
     case kAudioUnitErr_InvalidFile			:
-        println( " kAudioUnitErr_InvalidFile");
+        print( " kAudioUnitErr_InvalidFile")
         
     case kAudioUnitErr_FormatNotSupported		:
-        println( " kAudioUnitErr_FormatNotSupported");
+        print( " kAudioUnitErr_FormatNotSupported")
         
     case kAudioUnitErr_Uninitialized		:
-        println( " kAudioUnitErr_Uninitialized");
+        print( " kAudioUnitErr_Uninitialized")
         
     case kAudioUnitErr_InvalidScope			:
-        println( " kAudioUnitErr_InvalidScope");
+        print( " kAudioUnitErr_InvalidScope")
         
     case kAudioUnitErr_PropertyNotWritable		:
-        println( " kAudioUnitErr_PropertyNotWritable");
+        print( " kAudioUnitErr_PropertyNotWritable")
         
     case kAudioUnitErr_InvalidPropertyValue		:
-        println( " kAudioUnitErr_InvalidPropertyValue");
+        print( " kAudioUnitErr_InvalidPropertyValue")
         
     case kAudioUnitErr_PropertyNotInUse		:
-        println( " kAudioUnitErr_PropertyNotInUse");
+        print( " kAudioUnitErr_PropertyNotInUse")
         
     case kAudioUnitErr_Initialized			:
-        println( " kAudioUnitErr_Initialized");
+        print( " kAudioUnitErr_Initialized")
         
     case kAudioUnitErr_InvalidOfflineRender		:
-        println( " kAudioUnitErr_InvalidOfflineRender");
+        print( " kAudioUnitErr_InvalidOfflineRender")
         
     case kAudioUnitErr_Unauthorized			:
-        println( " kAudioUnitErr_Unauthorized");
+        print( " kAudioUnitErr_Unauthorized")
         
     default:
-        println("huh?")
+        print("huh?")
     }
 }
  

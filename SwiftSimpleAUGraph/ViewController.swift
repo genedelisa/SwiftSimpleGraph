@@ -10,16 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var soundGenerator:SoundGenerator
-    
-    init(coder aDecoder: NSCoder!) {
-        self.soundGenerator = SoundGenerator()
-        super.init(coder: aDecoder)
-    }
+    var soundGenerator:SoundGenerator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.soundGenerator = SoundGenerator()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,13 +24,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playNoteOn(b:UIButton) {
-        var note:UInt32 = UInt32(b.tag)
-        var velocity:UInt32 = 100
+        let note = UInt32(b.tag)
+        let velocity = UInt32(100)
         soundGenerator.playNoteOn(note, velocity: velocity)
     }
     
     @IBAction func playNoteOff(b:UIButton) {
-        var note:UInt32 = UInt32(b.tag)
+        let note = UInt32(b.tag)
         soundGenerator.playNoteOff(note)
     }
 

@@ -8,8 +8,7 @@
 
 import Foundation
 import AudioToolbox
-//import AVFoundation
-//import CoreAudio
+
 
 class SoundGenerator : NSObject {
     var processingGraph:AUGraph
@@ -19,7 +18,7 @@ class SoundGenerator : NSObject {
     var ioUnit:AudioUnit
     var isPlaying:Bool
     
-    init() {
+    override init() {
         self.processingGraph = AUGraph()
         self.samplerNode = AUNode()
         self.ioNode = AUNode()
@@ -34,7 +33,7 @@ class SoundGenerator : NSObject {
     
     
     func augraphSetup() {
-        var status : OSStatus = 0
+        var status = OSStatus(noErr)
         status = NewAUGraph(&processingGraph)
         CheckError(status)
         
@@ -43,11 +42,17 @@ class SoundGenerator : NSObject {
         //https://developer.apple.com/library/prerelease/ios/documentation/AudioUnit/Reference/AudioComponentServicesReference/index.html#//apple_ref/swift/struct/AudioComponentDescription
         
         
-        var cd:AudioComponentDescription = AudioComponentDescription(componentType: OSType(kAudioUnitType_MusicDevice),componentSubType: OSType(kAudioUnitSubType_Sampler),componentManufacturer: OSType(kAudioUnitManufacturer_Apple),componentFlags: 0,componentFlagsMask: 0)
+        var cd = AudioComponentDescription(componentType: OSType(kAudioUnitType_MusicDevice),
+            componentSubType: OSType(kAudioUnitSubType_Sampler),
+            componentManufacturer: OSType(kAudioUnitManufacturer_Apple),
+            componentFlags: 0,componentFlagsMask: 0)
         status = AUGraphAddNode(self.processingGraph, &cd, &samplerNode)
         CheckError(status)
         
-        var ioUnitDescription:AudioComponentDescription = AudioComponentDescription(componentType: OSType(kAudioUnitType_Output),componentSubType: OSType(kAudioUnitSubType_RemoteIO),componentManufacturer: OSType(kAudioUnitManufacturer_Apple),componentFlags: 0,componentFlagsMask: 0)
+        var ioUnitDescription = AudioComponentDescription(componentType: OSType(kAudioUnitType_Output),
+            componentSubType: OSType(kAudioUnitSubType_RemoteIO),
+            componentManufacturer: OSType(kAudioUnitManufacturer_Apple),
+            componentFlags: 0,componentFlagsMask: 0)
         status = AUGraphAddNode(self.processingGraph, &ioUnitDescription, &ioNode)
         CheckError(status)
         
@@ -59,8 +64,8 @@ class SoundGenerator : NSObject {
         status = AUGraphNodeInfo(self.processingGraph, self.ioNode, nil, &ioUnit)
         CheckError(status)
         
-        var ioUnitOutputElement:AudioUnitElement = 0
-        var samplerOutputElement:AudioUnitElement = 0
+        let ioUnitOutputElement = AudioUnitElement(0)
+        let samplerOutputElement = AudioUnitElement(0)
         status = AUGraphConnectNodeInput(self.processingGraph,
             self.samplerNode, samplerOutputElement, // srcnode, inSourceOutputNumber
             self.ioNode, ioUnitOutputElement) // destnode, inDestInputNumber
@@ -70,40 +75,41 @@ class SoundGenerator : NSObject {
     func graphStart() {
         //https://developer.apple.com/library/prerelease/ios/documentation/AudioToolbox/Reference/AUGraphServicesReference/index.html#//apple_ref/c/func/AUGraphIsInitialized
         
-        var status : OSStatus = OSStatus(noErr)
-        var outIsInitialized:Boolean = 0
+        var status = OSStatus(noErr)
+        var outIsInitialized = DarwinBoolean(false)
         status = AUGraphIsInitialized(self.processingGraph, &outIsInitialized)
-        println("isinit status is \(status)")
-        println("bool is \(outIsInitialized)")
-        if outIsInitialized == 0 {
+        print("isinit status is \(status)")
+        print("bool is \(outIsInitialized)")
+        if !outIsInitialized  {
             status = AUGraphInitialize(self.processingGraph)
             CheckError(status)
         }
         
-        var isRunning:Boolean = 0
+
+        var isRunning = DarwinBoolean(false)
         AUGraphIsRunning(self.processingGraph, &isRunning)
-        println("running bool is \(isRunning)")
-        if isRunning == 0 {
+        print("running bool is \(isRunning)")
+        if !isRunning  {
             status = AUGraphStart(self.processingGraph)
             CheckError(status)
         }
         
-        self.isPlaying = true;
+        self.isPlaying = true
     }
     
     func playNoteOn(noteNum:UInt32, velocity:UInt32)    {
-        var noteCommand:UInt32 = 0x90 | 0;
-        var status : OSStatus = OSStatus(noErr)
+        let noteCommand = UInt32(0x90 | 0)
+        var status = OSStatus(noErr)
         status = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, velocity, 0)
         CheckError(status)
-        println("noteon status is \(status)")
+        print("noteon status is \(status)")
     }
     
     func playNoteOff(noteNum:UInt32)    {
-        var noteCommand:UInt32 = 0x80 | 0;
-        var status : OSStatus = OSStatus(noErr)
+        let noteCommand = UInt32(0x80 | 0)
+        var status = OSStatus(noErr)
         status = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, 0, 0)
         CheckError(status)
-        println("noteoff status is \(status)")
+        print("noteoff status is \(status)")
     }
 }

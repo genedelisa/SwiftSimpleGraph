@@ -1,0 +1,16 @@
+# file: .travis.yml
+language: objective-c
+osx_image: xcode6.4
+xcode_project: SwiftSimpleAUGraph
+
+before_install:
+- brew update
+- brew outdated xctool || brew upgrade xctool
+- gem install xcpretty -N
+
+script:
+
+- xctool -project SwiftSimpleAUGraph.xcodeproj  -scheme "SwiftSimpleAUGraph" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+
+
+# http://docs.travis-ci.com/user/languages/objective-c/
