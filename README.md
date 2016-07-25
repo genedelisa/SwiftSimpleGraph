@@ -30,9 +30,9 @@ This does not load any samples. You will hear sine waves.
 ## Bugs
 
 
-[![GitHub issues](https://img.shields.io/github/issues/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleAUGraph/issues)
+[![GitHub issues](https://img.shields.io/github/issues/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/issues)
 
-If you find one, [please add it to issues](https://github.com/genedelisa/SwiftSimpleAUGraph/issues)
+If you find one, [please add it to issues](https://github.com/genedelisa/SwiftSimpleGraph/issues)
 
 
 
