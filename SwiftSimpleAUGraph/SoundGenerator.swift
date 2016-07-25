@@ -19,12 +19,12 @@ class SoundGenerator : NSObject {
     var isPlaying:Bool
     
     override init() {
-        self.processingGraph = AUGraph()
-        self.samplerNode = AUNode()
-        self.ioNode = AUNode()
-        self.samplerUnit  = AudioUnit()
-        self.ioUnit  = AudioUnit()
-        self.isPlaying = false
+        self.processingGraph = nil
+        self.samplerNode     = AUNode()
+        self.ioNode          = AUNode()
+        self.samplerUnit     = nil
+        self.ioUnit          = nil
+        self.isPlaying       = false
         super.init()
         
         augraphSetup()
@@ -42,17 +42,21 @@ class SoundGenerator : NSObject {
         //https://developer.apple.com/library/prerelease/ios/documentation/AudioUnit/Reference/AudioComponentServicesReference/index.html#//apple_ref/swift/struct/AudioComponentDescription
         
         
-        var cd = AudioComponentDescription(componentType: OSType(kAudioUnitType_MusicDevice),
-            componentSubType: OSType(kAudioUnitSubType_Sampler),
+        var cd = AudioComponentDescription(
+            componentType:         OSType(kAudioUnitType_MusicDevice),
+            componentSubType:      OSType(kAudioUnitSubType_Sampler),
             componentManufacturer: OSType(kAudioUnitManufacturer_Apple),
-            componentFlags: 0, componentFlagsMask: 0)
+            componentFlags:        0,
+            componentFlagsMask:    0)
         status = AUGraphAddNode(self.processingGraph, &cd, &samplerNode)
         CheckError(status)
         
-        var ioUnitDescription = AudioComponentDescription(componentType: OSType(kAudioUnitType_Output),
-            componentSubType: OSType(kAudioUnitSubType_RemoteIO),
-            componentManufacturer: OSType(kAudioUnitManufacturer_Apple),
-            componentFlags: 0, componentFlagsMask: 0)
+        var ioUnitDescription = AudioComponentDescription(
+            componentType:          OSType(kAudioUnitType_Output),
+            componentSubType:       OSType(kAudioUnitSubType_RemoteIO),
+            componentManufacturer:  OSType(kAudioUnitManufacturer_Apple),
+            componentFlags:         0,
+            componentFlagsMask:     0)
         status = AUGraphAddNode(self.processingGraph, &ioUnitDescription, &ioNode)
         CheckError(status)
         

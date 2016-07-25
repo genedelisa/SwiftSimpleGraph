@@ -2,9 +2,18 @@
 
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://en.wikipedia.org/wiki/MIT_License)
-[![Build Status](https://travis-ci.org/genedelisa/TableBinding.svg)](https://travis-ci.org/genedelisa/SwiftSimpleAUGraph)
-[![GitHub tag](https://img.shields.io/github/tag/genedelisa/tablebinding.svg)](https://github.com/genedelisa/SwiftSimpleAUGraph/)
-[![GitHub release](https://img.shields.io/github/release/genedelisa/tablebinding.svg)](https://github.com/genedelisa/SwiftSimpleAUGraph/)
+[![Build Status](https://travis-ci.org/genedelisa/SwiftSimpleGraph.svg)](https://travis-ci.org/genedelisa/SwiftSimpleGraph)
+
+[![GitHub tag](https://img.shields.io/github/tag/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/)
+[![GitHub release](https://img.shields.io/github/release/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/)
+[![GitHub commits](https://img.shields.io/github/commits-since/genedelisa/SwiftSimpleGraph/1.0.0.svg)
+
+[![Swift 2](https://img.shields.io/badge/swift2-compatible-4BC51D.svg?style=flat")](https://developer.apple.com/swift)
+
+[![Platforms OS X | iOS](https://img.shields.io/badge/Platforms-OS%20X%20%7C%20iOS-lightgray.svg?style=flat)](https://swift.org/)
+
+[![Sponsors](https://img.shields.io/badge/Sponsors-Rockhopper%20Technologies-orange.svg?style=flat)](http://www.rockhoppertech.com/)
+[![Twitter @GeneDeLisaDev](https://img.shields.io/twitter/follow/GeneDeLisaDev.svg?style=social)](https://twitter.com/GeneDeLisaDev)
 
 
 Swift version of creating a simple `AUGraph` with a synth node.
@@ -21,7 +30,7 @@ This does not load any samples. You will hear sine waves.
 ## Bugs
 
 
-[![GitHub issues](https://img.shields.io/github/issues/genedelisa/tablebinding.svg)](https://github.com/genedelisa/SwiftSimpleAUGraph/issues)
+[![GitHub issues](https://img.shields.io/github/issues/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleAUGraph/issues)
 
 If you find one, [please add it to issues](https://github.com/genedelisa/SwiftSimpleAUGraph/issues)
 
@@ -31,7 +40,7 @@ If you find one, [please add it to issues](https://github.com/genedelisa/SwiftSi
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=F5KE9Z29MH8YQ&bnP-DonationsBF:btn_donate_SM.gif:NonHosted)
 
-<img src="http://www.rockhoppertech.com/blog/wp-content/uploads/2015/05/IMG_0657.png" alt="Giacomo Kitty" width="400" height="300">
+<img src="http://www.rockhoppertech.com/blog/wp-content/uploads/2016/07/momocoding-1024.png" alt="Giacomo Kitty" width="400" height="300">
 
 ## Licensing
 
