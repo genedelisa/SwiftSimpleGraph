@@ -23,13 +23,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func playNoteOn(b:UIButton) {
+    @IBAction func playNoteOn(_ b:UIButton) {
         let note = UInt32(b.tag)
         let velocity = UInt32(100)
         soundGenerator.playNoteOn(note, velocity: velocity)
     }
     
-    @IBAction func playNoteOff(b:UIButton) {
+    @IBAction func playNoteOff(_ b:UIButton) {
         let note = UInt32(b.tag)
         soundGenerator.playNoteOff(note)
     }

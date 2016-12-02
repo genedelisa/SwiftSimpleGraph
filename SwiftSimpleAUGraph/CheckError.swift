@@ -11,7 +11,7 @@ import AudioToolbox
 import AVFoundation
 import CoreAudio
 
-func CheckError(error:OSStatus) {
+func CheckError(_ error:OSStatus) {
     if error == 0 {return}
     
     switch(error) {
