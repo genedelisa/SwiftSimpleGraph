@@ -1,9 +1,8 @@
-#SwiftSimpleAUGraph
+# SwiftSimpleAUGraph
 
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://en.wikipedia.org/wiki/MIT_License)
 [![Build Status](https://travis-ci.org/genedelisa/SwiftSimpleGraph.svg)](https://travis-ci.org/genedelisa/SwiftSimpleGraph)
-
 [![GitHub tag](https://img.shields.io/github/tag/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/)
 [![GitHub release](https://img.shields.io/github/release/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/)
 [![GitHub commits](https://img.shields.io/github/commits-since/genedelisa/SwiftSimpleGraph/1.0.0.svg)
