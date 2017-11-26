@@ -88,7 +88,7 @@ class SoundGenerator : NSObject {
         status = AUGraphIsInitialized(self.processingGraph!, &outIsInitialized)
         print("isinit status is \(status)")
         print("bool is \(outIsInitialized)")
-        if !outIsInitialized  {
+        if !outIsInitialized.boolValue  {
             status = AUGraphInitialize(self.processingGraph!)
             CheckError(status)
         }
@@ -96,7 +96,7 @@ class SoundGenerator : NSObject {
         var isRunning = DarwinBoolean(false)
         AUGraphIsRunning(self.processingGraph!, &isRunning)
         print("running bool is \(isRunning)")
-        if !isRunning  {
+        if !isRunning.boolValue  {
             status = AUGraphStart(self.processingGraph!)
             CheckError(status)
         }
