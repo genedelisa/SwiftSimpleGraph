@@ -8,7 +8,7 @@
 [![GitHub release](https://img.shields.io/github/release/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/)
 [![GitHub commits](https://img.shields.io/github/commits-since/genedelisa/SwiftSimpleGraph/1.0.0.svg)
 
-[![Swift 2](https://img.shields.io/badge/swift2-compatible-4BC51D.svg?style=flat")](https://developer.apple.com/swift)
+[![Swift 4](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat")](https://developer.apple.com/swift)
 
 [![Platforms OS X | iOS](https://img.shields.io/badge/Platforms-OS%20X%20%7C%20iOS-lightgray.svg?style=flat)](https://swift.org/)
 
@@ -25,7 +25,7 @@ This does not load any samples. You will hear sine waves.
 
 ## Blog post for this example.
 
-[Blog post] (http://www.rockhoppertech.com/blog/swift-and-core-audio/ "Blog Post")
+[Blog post](http://www.rockhoppertech.com/blog/swift-and-core-audio/ )
 
 ## Bugs
 

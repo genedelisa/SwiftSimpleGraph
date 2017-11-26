@@ -11,10 +11,12 @@ import AudioToolbox
 import AVFoundation
 import CoreAudio
 
-func CheckError(_ error:OSStatus) {
+// swiftlint:disable function_body_length
+
+func CheckError(_ error: OSStatus) {
     if error == 0 {return}
     
-    switch(error) {
+    switch error {
         // AudioToolbox
     case kAUGraphErr_NodeNotFound:
         print("Error:kAUGraphErr_NodeNotFound")
