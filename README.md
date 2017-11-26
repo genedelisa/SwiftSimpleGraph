@@ -1,11 +1,14 @@
 # SwiftSimpleAUGraph
 
-
+[![GitHub version](https://badge.fury.io/gh/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://en.wikipedia.org/wiki/MIT_License)
 [![Build Status](https://travis-ci.org/genedelisa/SwiftSimpleGraph.svg)](https://travis-ci.org/genedelisa/SwiftSimpleGraph)
 [![GitHub tag](https://img.shields.io/github/tag/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/)
 [![GitHub release](https://img.shields.io/github/release/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/)
-[![GitHub commits](https://img.shields.io/github/commits-since/genedelisa/SwiftSimpleGraph/1.0.0.svg)
+[![GitHub commits](https://img.shields.io/github/commits-since/genedelisa/SwiftSimpleGraph/v1.0.0.svg)](https://GitHub.com/genedelisa/SwiftSimpleGraph/commit/)
+[![Github all releases](https://img.shields.io/github/downloads/genedelisa/SwiftSimpleGraph/total.svg)](https://GitHub.com/genedelisa/SwiftSimpleGraph/releases/)
+[![GitHub stars](https://img.shields.io/github/stars/genedelisa/SwiftSimpleGraph.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/genedelisa/SwiftSimpleGraph/stargazers/)
+
 
 [![Swift 4](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat")](https://developer.apple.com/swift)
 
@@ -27,7 +30,6 @@ This does not load any samples. You will hear sine waves.
 [Blog post](http://www.rockhoppertech.com/blog/swift-and-core-audio/ )
 
 ## Bugs
-
 
 [![GitHub issues](https://img.shields.io/github/issues/genedelisa/SwiftSimpleGraph.svg)](https://github.com/genedelisa/SwiftSimpleGraph/issues)
 
